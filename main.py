@@ -16,7 +16,7 @@ class LoginForm(FlaskForm):
 @app.route("/index")
 def index():
     user = "КИС20-03 "
-    return render_template('index.html', title="Home pade", username=user)
+    return render_template('index_old.html', title="Home pade", username=user)
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -34,7 +34,7 @@ def success():
 
 @app.route("/image")
 def image():
-    return f'''<img src="{url_for('static', filename='img/bla.jpg')}" 
+    return f'''<img src="{url_for('static', filename='img/bla1.jpg')}" 
            alt="здесь должна была быть картинка, но не нашлась">'''
 
 
